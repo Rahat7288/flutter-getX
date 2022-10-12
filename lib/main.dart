@@ -73,6 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ElevatedButton(
                 onPressed: () {
+                  /*
+                  there are two more properties in  getX navigation
+                  *Get.off(go to the next screen but remove the previous screen from the stack)
+                  *Get.offAll(go to the next screen but remove all the previous screen)
+                  */
                   Get.to(Another());
                 },
                 child: Text('go to another page')),
