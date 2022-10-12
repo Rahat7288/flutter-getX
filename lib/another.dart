@@ -11,12 +11,18 @@ class Another extends StatelessWidget {
         title: Text('Another page'),
       ),
       body: Center(
-          child: ElevatedButton(
+          child: Column(
+            children: [
+
+              Text(Get.arguments),
+              ElevatedButton(
         onPressed: () {
-          Get.back();
+              Get.back();
         },
         child: Text('go to home'),
-      )),
+      ),
+            ],
+          )),
     );
   }
 }

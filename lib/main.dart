@@ -78,7 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   *Get.off(go to the next screen but remove the previous screen from the stack)
                   *Get.offAll(go to the next screen but remove all the previous screen)
                   */
-                  Get.to(Another());
+
+                  //we can pass data one page to another using the arguments
+                  Get.to(Another(), arguments: 'Rahat');
                 },
                 child: Text('go to another page')),
           ],
