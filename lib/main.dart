@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get.dart';
+import 'package:get_x/another.dart';
 
 void main() {
   runApp(const MyApp());
@@ -68,7 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     backgroundColor: Colors.yellow,
                   );
                 },
-                child: Text('Press for DialogBox'))
+                child: Text('Press for DialogBox')),
+
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(Another());
+                },
+                child: Text('go to another page')),
           ],
         ),
       ),
