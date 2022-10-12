@@ -40,19 +40,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            /*
-            * playing with snackbar in flutter
-            */
-            Get.snackbar(
-              "this is a snackbar",
-              "from getx",
-              snackPosition: SnackPosition.BOTTOM,
-              backgroundColor: Colors.red,
-            );
-          },
-          child: Text('Press'),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                /*
+                * playing with snackbar in flutter
+                */
+                Get.snackbar(
+                  "this is a snackbar",
+                  "from getx",
+                  snackPosition: SnackPosition.BOTTOM,
+                  backgroundColor: Colors.red,
+                );
+              },
+              child: Text('Press for snackbar'),
+            ),
+
+            //this part is for dialog box in flutter using getX
+
+            ElevatedButton(
+                onPressed: () {
+                  Get.defaultDialog(
+                    title: 'Are you sure',
+                    // content needs a widget we can use whatever we want
+                    content: Text('you want to exit the app ?'),
+                    backgroundColor: Colors.yellow,
+                  );
+                },
+                child: Text('Press for DialogBox'))
+          ],
         ),
       ),
     );
